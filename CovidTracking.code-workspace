@@ -6,6 +6,10 @@
 		{
 			"name": "COVID-19",
 			"path": "CovidData/COVID-19"
+		},
+		{
+			"name": "Chart.js",
+			"path": "Client/Chart.js"
 		}
 	],
 	"settings": {
