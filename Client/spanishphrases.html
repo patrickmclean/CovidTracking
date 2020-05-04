@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>SpanishPhrases</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="js/getPhraseScripts.js"></script>
+    <script type="text/javascript" src="js/addPhraseScripts.js"></script>
+
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <!--    CUSTOM-->
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700|Amatic+SC|Raleway:400,700' rel='stylesheet'
+        type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/mcchangStyles.css">
+</head>
+
+<body>
+
+    <div class="content">
+
+   <!-- Application -->
+        <div class="container-fluid">
+
+            <!-- Banner -->
+            <div class="jumbotron bgBanner">
+                <div class="row">
+                    <h2 class="text-center txtWhite">Spanish Phrases</h2>
+                    <h5 class="text-center txtWhite"> 
+                        The best way to learn a language <br>
+                        is with everyday phrases <br>
+                        Practice them here
+
+                    </h5>
+                </div>
+            </div>    
+         
+            <!-- Buttons -->
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 padBot">
+
+                        <button id="newPhraseButton" type="button" onclick="nextPhrase(mySession)" class="centerElement-Button">New Phrase</button>
+                        <p id="englishPhrase" class="centerElement-Phrase"></p>
+                        <input type=text id="inputInput" placeholder="Translation" style="font-style:italic" class="centerElement-Phrase">
+                        <input type=button value="Submit" id="submitButton" onclick="submitTranslation(mySession)" class="centerElement-Button">
+                        <p id="rightWrong" class="centerElement">
+                        <p id="spanishPhrase" class="centerElement">
+                        <p id="countButtons">
+                            <input type=button value="Reset" id="resetButton" onclick="mySession = sessionReset(mySession)" class="smallButton" style="background-color:indianred">
+                            <span id="numTries" class="smallButton" style="color:grey">Attempts: 0</span>
+                            <span id="numRight" class="smallButton" style="color:green">Right: 0</span>
+                            <span id="numWrong" class="smallButton" style="color:indianred">Wrong: 0</span>
+                        </p>
+                        <p id="footer" class="centerElement">Version 03/03/19. Number of phrases:
+                            <span id="numPhrasesID"></span><br><br>
+                            <input type=button value="Admin" id="adminButton" onclick="window.location.href='addphrase.html'" class="smallButton" style="background-color:lightgrey ; color:darkslategrey">
+                        </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- session class holds user session data -->
+    <script>
+        var mySession = new sessionClass();
+        mySession = sessionReset(mySession);
+    </script>
+
+    <!-- Make the enter key click the submit button -->
+    <script>
+        var inputInput = document.getElementById("inputInput");
+        // Execute a function when the user releases a key on the keyboard
+        inputInput.addEventListener("keyup", function(event) {
+            // Cancel the default action, if needed
+            event.preventDefault();
+            // Number 13 is the "Enter" key on the keyboard
+            if (event.keyCode === 13) {
+                // Trigger the button element with a click
+                document.getElementById("submitButton").click();
+            }
+        });
+    </script>
+
+</body>
+
+</html>

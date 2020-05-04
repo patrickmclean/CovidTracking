@@ -34,7 +34,6 @@ class DataReader:
         # Get country & Date subset
         startDate = "2/28/20"
         endDate = "5/2/20"
-        json_file = "output.json"
 
         NLDeaths = myDataFrame.loc[
             (myDataFrame['Country/Region'] == 'Netherlands') 

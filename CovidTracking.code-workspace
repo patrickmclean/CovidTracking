@@ -10,6 +10,9 @@
 		{
 			"name": "Chart.js",
 			"path": "Client/Chart.js"
+		},
+		{
+			"path": "CherryPy"
 		}
 	],
 	"settings": {
