@@ -1,3 +1,6 @@
+# Contains functions for reading and writing files
+
+
 import shutil         #Contains functions for operating files
 import os         #imports the os
 
