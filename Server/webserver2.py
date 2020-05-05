@@ -19,11 +19,9 @@ class DataLoaderWebService(object):
         return cherrypy.session['mystring']
 
     def POST(self, country='netherlands'):
-        return_string = 'this is the data for the ' + country + '<br>'
         dr = DataReader()
         dr.getDeaths()
-        return_string += dr.jsonOutput
-        return return_string
+        return dr.jsonOutput
 
     def PUT(self, another_string):
         cherrypy.session['mystring'] = another_string
@@ -50,7 +48,7 @@ if __name__ == '__main__':
         },
         '/static': {
             'tools.staticdir.on': True,
-            'tools.staticdir.dir': './cherrypy'
+            'tools.staticdir.dir': './Client'
         }
     }
     webapp = DataLoader()

@@ -35,17 +35,11 @@ class DataReader:
         startDate = "2/28/20"
         endDate = "5/2/20"
 
+        countryRow = myDataFrame[(myDataFrame['Country/Region'] == 'Netherlands') 
+            & (myDataFrame['Province/State'].isnull())].index
+
         NLDeaths = myDataFrame.loc[
-            (myDataFrame['Country/Region'] == 'Netherlands') 
-            & (myDataFrame['Province/State'].isnull()),
+            countryRow[0],
             startDate:endDate]
-        self.jsonOutput = NLDeaths.to_json()
+        self.jsonOutput = NLDeaths.to_json(orient='split')
 
-
-## Main ##
-
-# Instantiate a DataReader object 
-
-#dr = DataReader()
-#dr.getDeaths()
-#print (dr.jsonOutput)
