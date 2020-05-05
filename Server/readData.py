@@ -27,19 +27,28 @@ class DataReader:
         self.csv_file = cwd + '/'+config["datapath"] + config["international deaths"]
 
         
-    def getDeaths(self):
+    def getDeaths(self,country):
         # Read CSV into Dataframe
         myDataFrame = pd.read_csv(self.csv_file)
-
+        
         # Get country & Date subset
         startDate = "2/28/20"
         endDate = "5/2/20"
 
-        countryRow = myDataFrame[(myDataFrame['Country/Region'] == 'Netherlands') 
+        countryRow = myDataFrame[(myDataFrame['Country/Region'] == country) 
             & (myDataFrame['Province/State'].isnull())].index
+        # separating this out is a way to get the array to format well.
+        # no doubt could be done better
+
+        # Todo: error handling. If the country name is misformated (capitals)
+        # or doesn't exist, this will fail. Need a graceful method.
 
         NLDeaths = myDataFrame.loc[
             countryRow[0],
             startDate:endDate]
         self.jsonOutput = NLDeaths.to_json(orient='split')
+        # the split orientation makes a fairly complicated json, but this
+        # was what I got to work - complicated to manage objects/arrays
+        # that pass over json. can probably find something
+        # simpler later
 

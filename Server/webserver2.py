@@ -15,19 +15,11 @@ class DataLoader(object):
 class DataLoaderWebService(object):
 
     @cherrypy.tools.accept(media='text/plain')
-    def GET(self):
-        return cherrypy.session['mystring']
-
-    def POST(self, country='netherlands'):
+    def POST(self, country='Netherlands'):
         dr = DataReader()
-        dr.getDeaths()
+        dr.getDeaths(country)
+        print('this is a placeholder')
         return dr.jsonOutput
-
-    def PUT(self, another_string):
-        cherrypy.session['mystring'] = another_string
-
-    def DELETE(self):
-        cherrypy.session.pop('mystring', None)
 
 
 if __name__ == '__main__':

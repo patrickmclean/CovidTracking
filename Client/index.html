@@ -24,7 +24,7 @@
 	<body>
 		<h1>Covid Graphs</h1> 
 				
-        <input type="text" value="netherlands" name="country"/>
+        <input type="text" value="Netherlands" name="country"/>
         <button id="load-data">Get me the data!</button>
         <div id="the-output">
           <canvas id="myChart" width="800" height="600"></canvas>
@@ -44,8 +44,8 @@
     $("#load-data").click(function(e) {
       $.post("/loaddata", {"country": $("input[name='country']").val()})
        .done(function(string) {
-         let input = Array(JSON.parse(string))[0];
-         data = input.data;
+         let input = Array(JSON.parse(string))[0];  // This is a little overwraught with array parsing, but 
+         data = input.data;                         // it was what I could get to work
          dates = input.index;
          length = input.index.length;
          myChart.data.labels = dates;
