@@ -17,10 +17,8 @@ class DataLoaderWebService(object):
     @cherrypy.tools.accept(media='text/plain')
     def POST(self, country='Netherlands'):
         dr = DataReader()
-        dr.getDeaths(country)
-        print('this is a placeholder')
-        return dr.jsonOutput
-
+        return dr.getDeaths(country)
+        
 
 if __name__ == '__main__':
     conf = {

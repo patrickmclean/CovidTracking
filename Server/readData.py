@@ -24,31 +24,49 @@ class DataReader:
         cwd = os.getcwd()
         config_filename = cwd+'/Config/config.json'
         config = json.loads(fm.Read(config_filename))
-        self.csv_file = cwd + '/'+config["datapath"] + config["international deaths"]
-
-        
-    def getDeaths(self,country):
         # Read CSV into Dataframe
-        myDataFrame = pd.read_csv(self.csv_file)
-        
-        # Get country & Date subset
-        startDate = "2/28/20"
-        endDate = "5/2/20"
+        self.csv_file = cwd + '/'+config["datapath"] + config["international deaths"]
+        self.dataFrame = pd.read_csv(self.csv_file)
+        # Set date subset - todo: make this dynamic and also set updaily refreshes
+        self.startDate = "2/28/20"
+        self.endDate = "5/2/20"
 
-        countryRow = myDataFrame[(myDataFrame['Country/Region'] == country) 
-            & (myDataFrame['Province/State'].isnull())].index
+    def getCountryRow(self,country):
+        df = self.dataFrame
+        return df[(df['Country/Region'] == country) & (df['Province/State'].isnull())].index[0]
         # separating this out is a way to get the array to format well.
         # no doubt could be done better
-
         # Todo: error handling. If the country name is misformated (capitals)
         # or doesn't exist, this will fail. Need a graceful method.
 
-        NLDeaths = myDataFrame.loc[
-            countryRow[0],
-            startDate:endDate]
-        self.jsonOutput = NLDeaths.to_json(orient='split')
+        
+    def getDeaths(self,country):
+        df = self.dataFrame
+
+        deaths = df.loc[self.getCountryRow(country),self.startDate:self.endDate]
+        deltaDeaths = deaths.copy()
+        deltaDeaths[0] = 0
+        for i in range(1,deaths.size):
+            deltaDeaths[i] = deaths[i] - deaths[i-1]
+        delta7d = deltaDeaths.copy()
+        for i in range(7,deaths.size):
+            total = 0
+            for j in range(0,6):
+                total += deltaDeaths[i-j]
+            delta7d[i] = total / 7
+ 
+        return delta7d.to_json(orient='split')
         # the split orientation makes a fairly complicated json, but this
         # was what I got to work - complicated to manage objects/arrays
         # that pass over json. can probably find something
         # simpler later
 
+        
+## Notes
+# NLDeaths is a series. This is a column of the dataframe
+# NLDeaths.size is the length
+# NLDeaths.index[x] is each index
+# NLDeaths[x] is the value
+# or NLDeaths[indexname]
+# Iterate:  for items in NLDeaths.iteritems(): print(items)
+# or items[0] for index and items[1] for value
