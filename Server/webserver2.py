@@ -26,15 +26,15 @@ if __name__ == '__main__':
             'tools.sessions.on': True,
             'tools.staticdir.root': os.path.abspath(os.getcwd())
         },
-        '/generator': {
-            'request.dispatch': cherrypy.dispatch.MethodDispatcher(),
-            'tools.response_headers.on': True,
-            'tools.response_headers.headers': [('Content-Type', 'text/plain')], 
-        },
         '/loaddata': {
             'request.dispatch': cherrypy.dispatch.MethodDispatcher(),
             'tools.response_headers.on': True,
-            'tools.response_headers.headers': [('Content-Type', 'text/plain')],#move this to json next
+            'tools.response_headers.headers': [('Content-Type', 'text/plain')],#move this to json next?
+        },
+        '/loadus': {
+            'request.dispatch': cherrypy.dispatch.MethodDispatcher(),
+            'tools.response_headers.on': True,
+            'tools.response_headers.headers': [('Content-Type', 'text/plain')],#move this to json next?
         },
         '/static': {
             'tools.staticdir.on': True,

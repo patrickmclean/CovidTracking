@@ -25,14 +25,17 @@ class DataReader:
         config_filename = cwd+'/Config/config.json'
         config = json.loads(fm.Read(config_filename))
         # Read CSV into Dataframe
-        self.csv_file = cwd + '/'+config["datapath"] + config["international deaths"]
-        self.dataFrame = pd.read_csv(self.csv_file)
+        csv_file = cwd + '/'+config["datapath"] + config["international deaths"]
+        self.globalFrame = pd.read_csv(csv_file)
+        csv_file = cwd + '/'+config["datapath"] + config["us deaths"]
+        self.usFrame = pd.read_csv(csv_file)
+
         # Set date subset - todo: make this dynamic and also set updaily refreshes
         self.startDate = "2/28/20"
         self.endDate = "5/2/20"
 
     def getCountryRow(self,country):
-        df = self.dataFrame
+        df = self.globalFrame
         return df[(df['Country/Region'] == country) & (df['Province/State'].isnull())].index[0]
         # separating this out is a way to get the array to format well.
         # no doubt could be done better
@@ -41,9 +44,13 @@ class DataReader:
 
         
     def getDeaths(self,country):
-        df = self.dataFrame
+        df = self.globalFrame
 
-        deaths = df.loc[self.getCountryRow(country),self.startDate:self.endDate]
+        if('US' in country):
+            deaths = self.getDeathsUS(country)
+        else:
+            deaths = df.loc[self.getCountryRow(country),self.startDate:self.endDate]
+        
         deltaDeaths = deaths.copy()
         deltaDeaths[0] = 0
         for i in range(1,deaths.size):
@@ -61,6 +68,12 @@ class DataReader:
         # that pass over json. can probably find something
         # simpler later
 
+    def getDeathsUS(self,country):
+        df = self.usFrame
+        state = country.replace('USA - ','') # strict for now, to improve later 
+        sf = df.loc[(df['Province_State'] == state),self.startDate:self.endDate]
+        return sf.sum(axis=0)
+        
         
 ## Notes
 # NLDeaths is a series. This is a column of the dataframe
