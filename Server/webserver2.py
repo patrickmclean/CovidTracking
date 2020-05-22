@@ -8,7 +8,7 @@ from readData import DataReader
 class DataLoader(object):
     @cherrypy.expose
     def index(self):
-        return open('./Client/index.html')
+        return open('Client/index.html')
 
 
 @cherrypy.expose
@@ -38,9 +38,11 @@ if __name__ == '__main__':
         },
         '/static': {
             'tools.staticdir.on': True,
-            'tools.staticdir.dir': './Client'
+            'tools.staticdir.dir': '../Client'
         }
     }
     webapp = DataLoader()
     webapp.loaddata = DataLoaderWebService()
+    cherrypy.config.update({'server.socket_host': '0.0.0.0',
+                            'server.socket_port':8080})
     cherrypy.quickstart(webapp, '/', conf)

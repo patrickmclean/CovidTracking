@@ -32,7 +32,7 @@ class DataReader:
 
         # Set date subset - todo: make this dynamic and also set updaily refreshes
         self.startDate = "2/28/20"
-        self.endDate = "5/2/20"
+        self.endDate = "5/19/20"
 
     def getCountryRow(self,country):
         df = self.globalFrame
