@@ -38,7 +38,7 @@ if __name__ == '__main__':
         },
         '/static': {
             'tools.staticdir.on': True,
-            'tools.staticdir.dir': '../Client'
+            'tools.staticdir.dir': 'Client'
         }
     }
     webapp = DataLoader()

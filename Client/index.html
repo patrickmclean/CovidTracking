@@ -5,19 +5,16 @@
     <meta charset="utf-8">
     <title>Covid Data</title>
     
-   
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   
-    
-	<!--    CUSTOM-->
-  <!-- <link rel="stylesheet" type="text/css" href="css/mcchangStyles.css"> -->
-  <link rel="stylesheet" href="/static/css/styles.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
-  
+	  <!--    CUSTOM-->
+    <!-- <link rel="stylesheet" type="text/css" href="css/mcchangStyles.css"> -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script src="/static/js/handlers.js"></script>
 </head>
-
 
 
 <html>
@@ -25,45 +22,22 @@
 		<h1>Covid Graphs</h1> 
 				
         <input type="text" value="Netherlands" name="country"/>
-        <button id="load-data">Get me world data!</button>
+        <button id="load-data">Load the chart</button>
         <div id="the-output">
           <canvas id="myChart" width="800" height="600"></canvas>
-            
         </div>
+
+        <!-- Change scale -->
+        <label>Set Y axis scale:</label>
+        <select id="y-scale-values" oninput="changeScale()">
+          <option value="100">100</option>
+          <option value="500" selected>500</option>
+          <option value="1000">1000</option>
+        </select>
+        
            
 	</body>
 </html>
 
-<!-- Graph handler -->
 <script src="/static/js/myChart.js"></script>
 
-<!-- Catch click and send service call-->
-
-<script type="text/javascript">
-  $(document).ready(function() {
-    $("#load-data").click(function(e) {
-      $.post("/loaddata", {"country": $("input[name='country']").val()})
-       .done(function(string) {
-         let input = Array(JSON.parse(string))[0];  // This is a little overwraught with array parsing, but 
-         data = input.data;                         // it was what I could get to work
-         dates = input.index;
-         length = input.index.length;
-         myChart.data.labels = dates;
-         myChart.data.datasets[0].data = data;
-         myChart.update();
-        //$("#the-output").show();
-        //$("#the-output").append(data);
-      });
-      e.preventDefault();
-    });
-  });
-
-</script>
-
-<!-- Todo: 
-# Button to normalize axis
-# Integrate US
-# Sum up provinces
-# Overlay moving average on daily graph
-# Choose between cases and deaths
--->
