@@ -32,9 +32,8 @@ python3 get-pip.py --user
 
 
 ## Tickets to come ##
-1. Change Y scale button
-2. Select country and region separately
-3. Complete country list from sheet for the above
+1. Select country from country list, with a default 'All' button for region
+2. Fill regions automagically
 4. Read end date from file
 5. Update the covid data daily
 6. Show cases and deaths as separate options

@@ -21,15 +21,16 @@
 	<body>
 		<h1>Covid Graphs</h1> 
 				
-        <input type="text" value="Netherlands" name="country"/>
-        <button id="load-data">Load the chart</button>
+        <label>Country:</label>
+        <select id="select-countries"></select>
+        
         <div id="the-output">
           <canvas id="myChart" width="800" height="600"></canvas>
         </div>
 
         <!-- Change scale -->
-        <label>Set Y axis scale:</label>
-        <select id="y-scale-values" oninput="changeScale()">
+        <label>Y axis scale:</label>
+        <select id="y-scale-values">
           <option value="100">100</option>
           <option value="500" selected>500</option>
           <option value="1000">1000</option>

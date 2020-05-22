@@ -34,6 +34,10 @@ class DataReader:
         self.startDate = "2/28/20"
         self.endDate = "5/19/20"
 
+    def getCountryList(self):
+        df = self.globalFrame
+        return pd.Series(df['Country/Region'].unique()).to_json()
+    
     def getCountryRow(self,country):
         df = self.globalFrame
         return df[(df['Country/Region'] == country) & (df['Province/State'].isnull())].index[0]
