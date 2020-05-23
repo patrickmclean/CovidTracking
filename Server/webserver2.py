@@ -5,6 +5,7 @@ import string
 import cherrypy
 from readData import DataReader
 
+# Return index page (plus test page)
 class DataLoader(object):
     @cherrypy.expose
     def index(self):
@@ -14,14 +15,16 @@ class DataLoader(object):
     def test(self):
         return "Another place"
 
+# Get deaths service
 @cherrypy.expose
 class DataLoaderWebService(object):
 
     @cherrypy.tools.accept(media='text/plain')
-    def POST(self, country='Netherlands'):
+    def POST(self, country, state):
         dr = DataReader()
-        return dr.getDeaths(country)
+        return dr.getDeaths(country,state)
     
+# Get list of countries service    
 @cherrypy.expose
 class CountryLoaderWebService(object):
 
@@ -29,6 +32,15 @@ class CountryLoaderWebService(object):
     def GET(self):
         dr = DataReader()
         return dr.getCountryList()
+
+# Get list of states service    
+@cherrypy.expose
+class StatesLoaderWebService(object):
+
+    @cherrypy.tools.accept(media='text/plain')
+    def GET(self):
+        dr = DataReader()
+        return dr.getStateList()
 
 if __name__ == '__main__':
     conf = {
@@ -41,12 +53,12 @@ if __name__ == '__main__':
             'tools.response_headers.on': True,
             'tools.response_headers.headers': [('Content-Type', 'text/plain')],
         },
-        '/loadus': {
+        '/loadcountries': {
             'request.dispatch': cherrypy.dispatch.MethodDispatcher(),
             'tools.response_headers.on': True,
             'tools.response_headers.headers': [('Content-Type', 'text/plain')],
         },
-        '/loadcountry': {
+        '/loadusstates': {
             'request.dispatch': cherrypy.dispatch.MethodDispatcher(),
             'tools.response_headers.on': True,
             'tools.response_headers.headers': [('Content-Type', 'text/plain')],
@@ -59,7 +71,8 @@ if __name__ == '__main__':
     }
     webapp = DataLoader()
     webapp.loaddata = DataLoaderWebService()
-    webapp.loadcountry = CountryLoaderWebService()
+    webapp.loadcountries = CountryLoaderWebService()
+    webapp.loadusstates = StatesLoaderWebService()
     cherrypy.config.update({'server.socket_host': '0.0.0.0', #this makes it transmit through host
                             'server.socket_port':8080})
     cherrypy.quickstart(webapp, '/', conf)

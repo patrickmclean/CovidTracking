@@ -37,24 +37,20 @@ class DataReader:
     def getCountryList(self):
         df = self.globalFrame
         return pd.Series(df['Country/Region'].unique()).to_json()
-    
-    def getCountryRow(self,country):
-        df = self.globalFrame
-        return df[(df['Country/Region'] == country) & (df['Province/State'].isnull())].index[0]
-        # separating this out is a way to get the array to format well.
-        # no doubt could be done better
-        # Todo: error handling. If the country name is misformated (capitals)
-        # or doesn't exist, this will fail. Need a graceful method.
 
+    def getStateList(self):
+        df = self.usFrame
+        return pd.Series(df['Province_State'].unique()).to_json()
         
-    def getDeaths(self,country):
+    def getDeaths(self,country,state):
         df = self.globalFrame
 
         if('US' in country):
-            deaths = self.getDeathsUS(country)
+            deaths = self.getDeathsUS(country,state)
         else:
-            deaths = df.loc[self.getCountryRow(country),self.startDate:self.endDate]
+            deaths = df.loc[(df['Country/Region'] == country),self.startDate:self.endDate].sum(axis=0)
         
+        # 7 day delta average (should add this to the class)
         deltaDeaths = deaths.copy()
         deltaDeaths[0] = 0
         for i in range(1,deaths.size):
@@ -72,9 +68,8 @@ class DataReader:
         # that pass over json. can probably find something
         # simpler later
 
-    def getDeathsUS(self,country):
+    def getDeathsUS(self,country,state):
         df = self.usFrame
-        state = country.replace('USA - ','') # strict for now, to improve later 
         sf = df.loc[(df['Province_State'] == state),self.startDate:self.endDate]
         return sf.sum(axis=0)
         
