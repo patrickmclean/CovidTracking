@@ -1,6 +1,6 @@
 // Scripts for event handling
 
-// Function gets called at the end of page load
+// Function gets called once page load has succeeded
 $(document).ready(function() {
     // Load default set of countries
     $.get("/loadcountries")
@@ -19,7 +19,11 @@ $(document).ready(function() {
         $.each(states, function(i,p) {
             $('#select-states').append($('<option></option>').val(p).html(p));
         });
-    })
+    }),
+    // Hide the states by default
+    $('#select-states').hide()
+    $('#select-state-label').hide()
+
 
     // Set up event handler for clicking on load country
   $("#select-countries").change(function(e) {
@@ -32,6 +36,16 @@ $(document).ready(function() {
         myChart.data.datasets[0].data = input.data;
         myChart.update();
         });
+    // if US, show state, else not
+    if ($("#select-countries").val() == "US") {
+        $('#select-states').show()
+        $('#select-state-label').show()
+    }
+    else {
+        $('#select-states').hide()
+        $('#select-state-label').hide()
+    }
+
     e.preventDefault();
     }),
 
@@ -46,8 +60,8 @@ $(document).ready(function() {
             myChart.data.datasets[0].data = input.data;
             myChart.update();
             });
-        e.preventDefault();
-        }),
+    e.preventDefault();
+    }),
     
 
 
