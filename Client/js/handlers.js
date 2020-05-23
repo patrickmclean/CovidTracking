@@ -29,7 +29,9 @@ $(document).ready(function() {
   $("#select-countries").change(function(e) {
     $.post("/loaddata", 
         {"country": $("#select-countries").val(),
-        "state": $("#select-states").val()})
+        "state": $("#select-states").val(),
+        "datatype": $("#select-metric").val()
+        })
      .done(function(string) {
         let input = Array(JSON.parse(string))[0];  
         myChart.data.labels = input.index; //dates
@@ -53,7 +55,8 @@ $(document).ready(function() {
     $("#select-states").change(function(e) {
         $.post("/loaddata", 
             {"country": $("#select-countries").val(),
-            "state": $("#select-states").val()})
+            "state": $("#select-states").val(),
+            "datatype": $("#select-metric").val()})
          .done(function(string) {
             let input = Array(JSON.parse(string))[0];  
             myChart.data.labels = input.index; //dates
@@ -62,7 +65,22 @@ $(document).ready(function() {
             });
     e.preventDefault();
     }),
-    
+
+    // Same for change datatype
+    $("#select-metric").change(function(e) {
+        $.post("/loaddata", 
+            {"country": $("#select-countries").val(),
+            "state": $("#select-states").val(),
+            "datatype": $("#select-metric").val()})
+         .done(function(string) {
+            let input = Array(JSON.parse(string))[0];  
+            myChart.data.labels = input.index; //dates
+            myChart.data.datasets[0].data = input.data;
+            myChart.update();
+            });
+    e.preventDefault();
+    }),
+ 
 
 
     $("#y-scale-values").change(function(e) {

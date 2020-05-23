@@ -20,46 +20,53 @@ class DataReader:
     def __init__(self):
 
         # Read the config file
-        # Future - turn this into a service - get key/value pair
         cwd = os.getcwd()
         config_filename = cwd+'/Config/config.json'
         config = json.loads(fm.Read(config_filename))
-        # Read CSV into Dataframe
+        
+        # Read CSVs into Dataframe
         csv_file = cwd + '/'+config["datapath"] + config["international deaths"]
-        self.globalFrame = pd.read_csv(csv_file)
+        self.globalDeaths = pd.read_csv(csv_file)
         csv_file = cwd + '/'+config["datapath"] + config["us deaths"]
-        self.usFrame = pd.read_csv(csv_file)
+        self.usDeaths = pd.read_csv(csv_file)
+        csv_file = cwd + '/'+config["datapath"] + config["international cases"]
+        self.globalCases = pd.read_csv(csv_file)
+        csv_file = cwd + '/'+config["datapath"] + config["us cases"]
+        self.usCases = pd.read_csv(csv_file)
 
         # Set date subset - todo: make this dynamic and also set updaily refreshes
         self.startDate = "2/28/20"
-        self.endDate = "5/19/20"
+        self.endDate = "5/22/20"
 
     def getCountryList(self):
-        df = self.globalFrame
+        df = self.globalDeaths
         return pd.Series(df['Country/Region'].unique()).to_json()
 
     def getStateList(self):
-        df = self.usFrame
+        df = self.usDeaths
         return pd.Series(df['Province_State'].unique()).to_json()
         
-    def getDeaths(self,country,state):
-        df = self.globalFrame
-
-        if('US' in country):
-            deaths = self.getDeathsUS(country,state)
-        else:
-            deaths = df.loc[(df['Country/Region'] == country),self.startDate:self.endDate].sum(axis=0)
+    def getData(self,country,state,datatype):
         
+        if(('US' in country) & (datatype == "deaths")):
+            data = self.getDeathsUS(state)
+        if(('US' in country) & (datatype == "cases")):
+            data = self.getCasesUS(state)
+        if(('US' not in country) & (datatype == "deaths")):
+            data = self.getDeathsGlobal(country)
+        if(('US' not in country) & (datatype == "cases")):
+            data = self.getCasesGlobal(country)
+
         # 7 day delta average (should add this to the class)
-        deltaDeaths = deaths.copy()
-        deltaDeaths[0] = 0
-        for i in range(1,deaths.size):
-            deltaDeaths[i] = deaths[i] - deaths[i-1]
-        delta7d = deltaDeaths.copy()
-        for i in range(7,deaths.size):
+        deltaData = data.copy()
+        deltaData[0] = 0
+        for i in range(1,data.size):
+            deltaData[i] = data[i] - data[i-1]
+        delta7d = deltaData.copy()
+        for i in range(7,data.size):
             total = 0
             for j in range(0,6):
-                total += deltaDeaths[i-j]
+                total += deltaData[i-j]
             delta7d[i] = total / 7
  
         return delta7d.to_json(orient='split')
@@ -68,12 +75,18 @@ class DataReader:
         # that pass over json. can probably find something
         # simpler later
 
-    def getDeathsUS(self,country,state):
-        df = self.usFrame
-        sf = df.loc[(df['Province_State'] == state),self.startDate:self.endDate]
-        return sf.sum(axis=0)
+    def getDeathsUS(self,state):
+        return self.usDeaths.loc[(self.usDeaths['Province_State'] == state),self.startDate:self.endDate].sum(axis=0)
+
+    def getCasesUS(self,state):
+        return self.usCases.loc[(self.usDeaths['Province_State'] == state),self.startDate:self.endDate].sum(axis=0)
         
+    def getDeathsGlobal(self,country):
+        return self.globalDeaths.loc[(self.globalDeaths['Country/Region'] == country),self.startDate:self.endDate].sum(axis=0)
         
+    def getCasesGlobal(self,country):
+        return self.globalCases.loc[(self.globalCases['Country/Region'] == country),self.startDate:self.endDate].sum(axis=0)
+
 ## Notes
 # NLDeaths is a series. This is a column of the dataframe
 # NLDeaths.size is the length
