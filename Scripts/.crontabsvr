@@ -1,0 +1,1 @@
+0 12 * * * ~/CovidTracking/Scripts/dldatacronsvr.sh >> ~/CovidTracking/Scripts/cron.log 2>&1

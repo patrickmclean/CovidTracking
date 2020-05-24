@@ -1,20 +1,30 @@
 # Run with Anaconda 3.6.1
 # Package manager conda
 
-To update covid data, in terminal:
-git fetch CovidData
-then update endData in readData.py
 
-To Run
-Start server/webserver2.py
-goto localhost:8080
 
-Connect to ec2 instance:
-Goto config folder
-run launch.sh
-make sure instance is running first...
+# Updating data
+Should be working automatically as cronjob
+Job is in Scripts/.crontab (or .crontabsvr)
+Update with vi (i for insert, esc, then :wq to write out)
+Update new script with: crontab ./.crontabsvr
+Logs are written to cron.log
+Running every day at 12 - pulls from github
 
-Setting up the server on ec2
+# Access the server
+Goto Scripts and run: ./sshaws.sh 
+This assumes instance is running. 
+If instance is stopped and restarted then IP address will need to be updated in this script
+
+# Running the webserver
+Login via SSH above
+cd CovidTracking
+python3 Server/webserver2.py
+
+Application is running on X.X.X.X:8080
+
+
+# Setting up a new server on ec2
 Check python 3 is installed
 yum list installed | grep -i python3
 latest pip 
@@ -30,14 +40,10 @@ if pip insn't working
 curl -O https://bootstrap.pypa.io/get-pip.py
 python3 get-pip.py --user
 
-Get new covid CovidData
-goto Covid-Data directory
-git pull origin master
-
-
 
 ## Tickets to come ##
-5. Update the covid data daily
+5. Check daily update of data is working
+6. Point to server through mcchang.com via reverse proxy
 8. Clean up graph presentation - legends, colors etc
 9. Make it responsive
 10. Script for deployment. ftp, stop and restart server etc
