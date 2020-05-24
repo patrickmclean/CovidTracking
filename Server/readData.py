@@ -36,7 +36,7 @@ class DataReader:
 
         # Set date subset - todo: make this dynamic and also set updaily refreshes
         self.startDate = "2/28/20"
-        self.endDate = "5/22/20"
+        self.endDate = self.usCases.columns[-1]
 
     def getCountryList(self):
         df = self.globalDeaths

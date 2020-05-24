@@ -1,0 +1,1 @@
+0 12 * * * ~/odrive/Google\ Drive\ -\ Main/Development/CovidTracking/Scripts/dldatacron.sh >> ~/odrive/Google\ Drive\ -\ Main/Development/CovidTracking/Scripts/cron.log 2>&1

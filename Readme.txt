@@ -37,9 +37,6 @@ git pull origin master
 
 
 ## Tickets to come ##
-6. Show cases and deaths as separate options
-7. Show daily plus 7 day overlay
-4. Read end date from file
 5. Update the covid data daily
 8. Clean up graph presentation - legends, colors etc
 9. Make it responsive
@@ -47,6 +44,7 @@ git pull origin master
 11. Divide by population
 12. Add Counties
 13. Compare regions
+14. Show daily plus 7 day overlay
 
 
 
