@@ -4,7 +4,7 @@ var myChart = new Chart(ctx, {
     data: {
         labels: [],
         datasets: [{
-            label: '# of Deaths',
+            label: '7 day average',
             data: [],
             backgroundColor: [
             ],
@@ -14,7 +14,8 @@ var myChart = new Chart(ctx, {
         }]
     },
     options: {
-        responsive: false,
+        responsive: true,
+        maintainaspectratio: false,
         scales: {
             yAxes: [{
                 ticks: {

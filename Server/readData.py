@@ -24,7 +24,7 @@ class DataReader:
         config_filename = cwd+'/Config/config.json'
         config = json.loads(fm.Read(config_filename))
         
-        # Read CSVs into Dataframe
+        # Read Covid CSVs into Dataframe
         csv_file = cwd + '/'+config["datapath"] + config["international deaths"]
         self.globalDeaths = pd.read_csv(csv_file)
         csv_file = cwd + '/'+config["datapath"] + config["us deaths"]
@@ -38,6 +38,13 @@ class DataReader:
         self.startDate = "2/28/20"
         self.endDate = self.usCases.columns[-1]
 
+        # Read Population CSVs into Dataframe
+        csv_file = cwd + '/'+config["populationspath"] + config["world populations"]
+        self.worldPopulations = pd.read_csv(csv_file)
+        csv_file = cwd + '/'+config["populationspath"] + config["us state populations"]
+        self.usStatePopulations = pd.read_csv(csv_file)
+        
+
     def getCountryList(self):
         df = self.globalDeaths
         return pd.Series(df['Country/Region'].unique()).to_json()
@@ -48,15 +55,34 @@ class DataReader:
         
     def getData(self,country,state,datatype):
         
-        if(('US' in country) & (datatype == "deaths")):
+        # Get raw data
+        if(('US' in country) & (datatype in ("deaths-abs","deaths-100k" ))):
             data = self.getDeathsUS(state)
-        if(('US' in country) & (datatype == "cases")):
+        if(('US' in country) & (datatype in ("cases-abs","cases-100k"))):
             data = self.getCasesUS(state)
-        if(('US' not in country) & (datatype == "deaths")):
+        if(('US' not in country) & (datatype in ("deaths-abs","deaths-100k"))):
             data = self.getDeathsGlobal(country)
-        if(('US' not in country) & (datatype == "cases")):
+        if(('US' not in country) & (datatype in ("cases-abs","cases-100k"))):
             data = self.getCasesGlobal(country)
 
+        # Get population
+        cp = self.worldPopulations.loc[self.worldPopulations['Country'] == country]['Population'].values
+        if (cp.size == 1): countryPopulation = pd.Series((cp[0]/1000000),range(0,data.size)) 
+        else: countryPopulation = 1 # trying to avoid an error state, no doubt a more elegant method available
+        sp = self.usStatePopulations.loc[self.usStatePopulations['State'] == state]['Population'].values
+        if (sp.size == 1): statePopulation = pd.Series((sp[0]/1000000),range(0,data.size)) 
+        else: statePopulation = 1
+        
+        # Divide if 100k
+        if(('US' in country) & (datatype == "deaths-100k")):
+            data = data / statePopulation.values
+        if(('US' in country) & (datatype == "cases-100k")):
+            data = data / statePopulation.values
+        if(('US' not in country) & (datatype == "deaths-100k")):
+            data = data / countryPopulation.values
+        if(('US' not in country) & (datatype == "cases-100k")):
+            data = data / countryPopulation.values
+        
         # 7 day delta average (should add this to the class)
         deltaData = data.copy()
         deltaData[0] = 0
@@ -65,10 +91,11 @@ class DataReader:
         delta7d = deltaData.copy()
         for i in range(7,data.size):
             total = 0
-            for j in range(0,6):
+            for j in range(0,7):
                 total += deltaData[i-j]
             delta7d[i] = total / 7
  
+        delta7d = delta7d.round(0)
         return delta7d.to_json(orient='split')
         # the split orientation makes a fairly complicated json, but this
         # was what I got to work - complicated to manage objects/arrays

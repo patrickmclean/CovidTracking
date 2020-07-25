@@ -1,8 +1,11 @@
 {
     "root": "./../",
     "datapath": "CovidData/COVID-19/",
+    "populationspath": "PopulationData/",
     "international deaths": "csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv",
     "us deaths": "csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_US.csv",
     "international cases": "csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv",
-    "us cases": "csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv"
+    "us cases": "csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv",
+    "world populations": "populationbycountry.csv",
+    "us state populations": "populationbyusstate.csv"
 }

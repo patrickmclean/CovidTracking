@@ -1,7 +1,9 @@
 # Run with Anaconda 3.6.1
 # Package manager conda
 
-
+# Run locally
+Launch webserver from root directory: python3 ./server/webserver2.py
+Launch http://localhost:8080/
 
 # Updating data
 Should be working automatically as cronjob
@@ -42,9 +44,6 @@ python3 get-pip.py --user
 
 
 ## Tickets to come ##
-5. Check daily update of data is working
-6. Point to server through mcchang.com via reverse proxy
-8. Clean up graph presentation - legends, colors etc
 9. Make it responsive
 10. Script for deployment. ftp, stop and restart server etc
 11. Divide by population

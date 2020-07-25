@@ -14,6 +14,7 @@ p {
 }
 label {
     font: 400 11px system-ui;;
+    text-align: center;
 }
 
 [class*="centerElement-"] {
@@ -69,4 +70,11 @@ label {
 
 .tableRow:hover {
     background-color: lightgoldenrodyellow;
+}
+
+@media only screen and (min-width: 800px) {
+.chart-container {
+    width: 60%;
+    margin: 20px auto;
+}
 }
