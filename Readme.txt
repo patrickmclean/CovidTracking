@@ -18,6 +18,13 @@ Goto Scripts and run: ./sshaws.sh
 This assumes instance is running. 
 If instance is stopped and restarted then IP address will need to be updated in this script
 
+
+# Download the latest
+Move Scripts directory to Scripts.bak
+git pull
+If it complains, delete the offending directories
+Then move scripts back
+
 # Running the webserver
 Login via SSH above
 cd CovidTracking
@@ -44,6 +51,7 @@ python3 get-pip.py --user
 
 
 ## Tickets to come ##
+Check something may be amiss with 1m calcs. And maybe make it per 10m because numbers are too small
 9. Make it responsive
 10. Script for deployment. ftp, stop and restart server etc
 11. Divide by population

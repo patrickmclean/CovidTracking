@@ -56,13 +56,13 @@ class DataReader:
     def getData(self,country,state,datatype):
         
         # Get raw data
-        if(('US' in country) & (datatype in ("deaths-abs","deaths-100k" ))):
+        if(('US' in country) & (datatype in ("deaths-abs","deaths-1m" ))):
             data = self.getDeathsUS(state)
-        if(('US' in country) & (datatype in ("cases-abs","cases-100k"))):
+        if(('US' in country) & (datatype in ("cases-abs","cases-1m"))):
             data = self.getCasesUS(state)
-        if(('US' not in country) & (datatype in ("deaths-abs","deaths-100k"))):
+        if(('US' not in country) & (datatype in ("deaths-abs","deaths-1m"))):
             data = self.getDeathsGlobal(country)
-        if(('US' not in country) & (datatype in ("cases-abs","cases-100k"))):
+        if(('US' not in country) & (datatype in ("cases-abs","cases-1m"))):
             data = self.getCasesGlobal(country)
 
         # Get population
@@ -73,14 +73,14 @@ class DataReader:
         if (sp.size == 1): statePopulation = pd.Series((sp[0]/1000000),range(0,data.size)) 
         else: statePopulation = 1
         
-        # Divide if 100k
-        if(('US' in country) & (datatype == "deaths-100k")):
+        # Divide if 1m
+        if(('US' in country) & (datatype == "deaths-1m")):
             data = data / statePopulation.values
-        if(('US' in country) & (datatype == "cases-100k")):
+        if(('US' in country) & (datatype == "cases-1m")):
             data = data / statePopulation.values
-        if(('US' not in country) & (datatype == "deaths-100k")):
+        if(('US' not in country) & (datatype == "deaths-1m")):
             data = data / countryPopulation.values
-        if(('US' not in country) & (datatype == "cases-100k")):
+        if(('US' not in country) & (datatype == "cases-1m")):
             data = data / countryPopulation.values
         
         # 7 day delta average (should add this to the class)
@@ -88,14 +88,14 @@ class DataReader:
         deltaData[0] = 0
         for i in range(1,data.size):
             deltaData[i] = data[i] - data[i-1]
-        delta7d = deltaData.copy()
+        delta7d = deltaData.copy().astype(float)
         for i in range(7,data.size):
             total = 0
             for j in range(0,7):
                 total += deltaData[i-j]
             delta7d[i] = total / 7
  
-        delta7d = delta7d.round(0)
+        delta7d = delta7d.round(1)
         return delta7d.to_json(orient='split')
         # the split orientation makes a fairly complicated json, but this
         # was what I got to work - complicated to manage objects/arrays

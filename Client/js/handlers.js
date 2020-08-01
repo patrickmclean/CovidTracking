@@ -73,7 +73,9 @@ $(document).ready(function() {
             "state": $("#select-states").val(),
             "datatype": $("#select-metric").val()})
          .done(function(string) {
-            let input = Array(JSON.parse(string))[0];  
+            let input = Array(JSON.parse(string))[0]; 
+            document.getElementById('y-scale-values').value=10 ;
+            myChart.options.scales.yAxes[0].ticks.max = 10;
             myChart.data.labels = input.index; //dates
             myChart.data.datasets[0].data = input.data;
             myChart.update();
