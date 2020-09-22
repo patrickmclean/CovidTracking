@@ -1,5 +1,8 @@
 // Scripts for event handling
 
+// BUG - on first load, nothing loads. need to click something. but when
+// i add it at the beginning, the functions have not returned yet and is too early
+
 // Function gets called once page load has succeeded
 $(document).ready(function() {
     // Load default set of countries
@@ -9,6 +12,18 @@ $(document).ready(function() {
         $('#select-countries').empty();
         $.each(countries, function(i, p) {
             $('#select-countries').append($('<option></option>').val(p).html(p));
+        });
+        // Load first dataset
+        $.post("/loaddata", 
+            {"country": $("#select-countries").val(),
+            "state": $("#select-states").val(),
+            "datatype": $("#select-metric").val()
+            })
+        .done(function(string) {
+            let input = Array(JSON.parse(string))[0];  
+            myChart.data.labels = input.index; //dates
+            myChart.data.datasets[0].data = input.data;
+            myChart.update();
         });
     }),
     // Load default set of US states
@@ -23,6 +38,7 @@ $(document).ready(function() {
     // Hide the states by default
     $('#select-states').hide()
     $('#select-state-label').hide()
+
 
 
     // Set up event handler for clicking on load country
@@ -74,7 +90,7 @@ $(document).ready(function() {
             "datatype": $("#select-metric").val()})
          .done(function(string) {
             let input = Array(JSON.parse(string))[0]; 
-            document.getElementById('y-scale-values').value=10 ;
+            document.getElementById('y-scale-values').value=100 ;
             myChart.options.scales.yAxes[0].ticks.max = 10;
             myChart.data.labels = input.index; //dates
             myChart.data.datasets[0].data = input.data;

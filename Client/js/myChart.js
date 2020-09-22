@@ -19,7 +19,7 @@ var myChart = new Chart(ctx, {
         scales: {
             yAxes: [{
                 ticks: {
-                    max: 500,
+                    max: 100,
                     beginAtZero: true
                 }
             }]

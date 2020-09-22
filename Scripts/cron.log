@@ -741,3 +741,523 @@ Fast-forward
  create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/07-22-2020.csv
  create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/07-23-2020.csv
  create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/07-24-2020.csv
+Sat Aug  1 12:00:00 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+From https://github.com/CSSEGISandData/COVID-19
+ * branch              master     -> FETCH_HEAD
+   1f099251..7090f145  master     -> origin/master
+Updating 1f099251..7090f145
+Fast-forward
+ README.md                                          |    6 +-
+ csse_covid_19_data/README.md                       |   28 +-
+ csse_covid_19_data/UID_ISO_FIPS_LookUp_Table.csv   |    1 +
+ .../csse_covid_19_daily_reports/07-03-2020.csv     |   56 +-
+ .../csse_covid_19_daily_reports/07-24-2020.csv     | 7860 ++++++++++----------
+ .../csse_covid_19_daily_reports/07-25-2020.csv     | 3931 ++++++++++
+ .../csse_covid_19_daily_reports/07-26-2020.csv     | 3932 ++++++++++
+ .../csse_covid_19_daily_reports/07-27-2020.csv     | 3932 ++++++++++
+ .../csse_covid_19_daily_reports/07-28-2020.csv     | 3933 ++++++++++
+ .../csse_covid_19_daily_reports/07-29-2020.csv     | 3936 ++++++++++
+ .../csse_covid_19_daily_reports/07-30-2020.csv     | 3936 ++++++++++
+ .../csse_covid_19_daily_reports/07-31-2020.csv     | 3936 ++++++++++
+ .../csse_covid_19_daily_reports_us/07-25-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/07-26-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/07-27-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/07-28-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/07-29-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/07-30-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/07-31-2020.csv  |   59 +
+ .../csse_covid_19_time_series/Errata.csv           |   39 +
+ .../time_series_covid19_confirmed_US.csv           | 6682 ++++++++---------
+ .../time_series_covid19_confirmed_global.csv       |  534 +-
+ .../time_series_covid19_deaths_US.csv              | 6682 ++++++++---------
+ .../time_series_covid19_deaths_global.csv          |  534 +-
+ .../time_series_covid19_recovered_global.csv       |  508 +-
+ 25 files changed, 39440 insertions(+), 11439 deletions(-)
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/07-25-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/07-26-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/07-27-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/07-28-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/07-29-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/07-30-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/07-31-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/07-25-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/07-26-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/07-27-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/07-28-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/07-29-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/07-30-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/07-31-2020.csv
+Sun Aug  2 12:00:00 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+From https://github.com/CSSEGISandData/COVID-19
+ * branch              master     -> FETCH_HEAD
+   7090f145..4fd54d9d  master     -> origin/master
+Updating 7090f145..4fd54d9d
+Fast-forward
+ .../csse_covid_19_daily_reports/08-01-2020.csv     | 3936 ++++++++++++
+ .../csse_covid_19_daily_reports_us/08-01-2020.csv  |   59 +
+ .../time_series_covid19_confirmed_US.csv           | 6682 ++++++++++----------
+ .../time_series_covid19_confirmed_global.csv       |  534 +-
+ .../time_series_covid19_deaths_US.csv              | 6682 ++++++++++----------
+ .../time_series_covid19_deaths_global.csv          |  534 +-
+ .../time_series_covid19_recovered_global.csv       |  508 +-
+ 7 files changed, 11465 insertions(+), 7470 deletions(-)
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-01-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-01-2020.csv
+Wed Aug  5 12:00:00 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+From https://github.com/CSSEGISandData/COVID-19
+ * branch              master     -> FETCH_HEAD
+   4fd54d9d..bab9f081  master     -> origin/master
+Updating 4fd54d9d..bab9f081
+Fast-forward
+ csse_covid_19_data/README.md                       |   17 +-
+ .../csse_covid_19_daily_reports/07-30-2020.csv     |    2 +-
+ .../csse_covid_19_daily_reports/07-31-2020.csv     |    2 +-
+ .../csse_covid_19_daily_reports/08-01-2020.csv     |    2 +-
+ .../csse_covid_19_daily_reports/08-02-2020.csv     | 3936 ++++++++++++
+ .../csse_covid_19_daily_reports/08-03-2020.csv     | 3936 ++++++++++++
+ .../csse_covid_19_daily_reports/08-04-2020.csv     | 3937 ++++++++++++
+ .../csse_covid_19_daily_reports_us/08-02-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/08-03-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/08-04-2020.csv  |   59 +
+ .../csse_covid_19_time_series/Errata.csv           |   46 +-
+ .../time_series_covid19_confirmed_US.csv           | 6682 ++++++++++----------
+ .../time_series_covid19_confirmed_global.csv       |  534 +-
+ .../time_series_covid19_deaths_US.csv              | 6682 ++++++++++----------
+ .../time_series_covid19_deaths_global.csv          |  534 +-
+ .../time_series_covid19_recovered_global.csv       |  508 +-
+ 16 files changed, 19508 insertions(+), 7487 deletions(-)
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-02-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-03-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-04-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-02-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-03-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-04-2020.csv
+Thu Aug  6 12:00:00 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+From https://github.com/CSSEGISandData/COVID-19
+ * branch              master     -> FETCH_HEAD
+   bab9f081..7b868933  master     -> origin/master
+Updating bab9f081..7b868933
+Fast-forward
+ README.md                                          |   27 +
+ .../csse_covid_19_daily_reports/08-05-2020.csv     | 3941 ++++++++++++
+ .../csse_covid_19_daily_reports_us/08-05-2020.csv  |   59 +
+ .../csse_covid_19_time_series/Errata.csv           |   20 +-
+ .../time_series_covid19_confirmed_US.csv           | 6682 ++++++++++----------
+ .../time_series_covid19_confirmed_global.csv       |  534 +-
+ .../time_series_covid19_deaths_US.csv              | 6682 ++++++++++----------
+ .../time_series_covid19_deaths_global.csv          |  534 +-
+ .../time_series_covid19_recovered_global.csv       |  508 +-
+ 9 files changed, 11506 insertions(+), 7481 deletions(-)
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-05-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-05-2020.csv
+Sat Aug  8 12:00:00 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+From https://github.com/CSSEGISandData/COVID-19
+ * branch              master     -> FETCH_HEAD
+Updating 7b868933..fd197e49
+Fast-forward
+ csse_covid_19_data/README.md                       |    1 +
+ .../csse_covid_19_daily_reports/06-19-2020.csv     | 7498 ++++++++++----------
+ .../csse_covid_19_daily_reports/08-04-2020.csv     |   10 +-
+ .../csse_covid_19_daily_reports/08-05-2020.csv     |   10 +-
+ .../csse_covid_19_daily_reports/08-06-2020.csv     | 3941 ++++++++++
+ .../csse_covid_19_daily_reports/08-07-2020.csv     | 3941 ++++++++++
+ .../csse_covid_19_daily_reports_us/08-06-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/08-07-2020.csv  |   59 +
+ .../csse_covid_19_time_series/Errata.csv           |    8 +-
+ .../time_series_covid19_confirmed_US.csv           | 6682 ++++++++---------
+ .../time_series_covid19_confirmed_global.csv       |  534 +-
+ .../time_series_covid19_deaths_US.csv              | 6682 ++++++++---------
+ .../time_series_covid19_deaths_global.csv          |  534 +-
+ .../time_series_covid19_recovered_global.csv       |  508 +-
+ 14 files changed, 19237 insertions(+), 11230 deletions(-)
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-06-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-07-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-06-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-07-2020.csv
+Sun Aug  9 12:00:00 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+From https://github.com/CSSEGISandData/COVID-19
+ * branch              master     -> FETCH_HEAD
+   fd197e49..824ea3ba  master     -> origin/master
+Updating fd197e49..824ea3ba
+Fast-forward
+ csse_covid_19_data/README.md                       |    1 +
+ .../csse_covid_19_daily_reports/08-08-2020.csv     | 3941 ++++++++++++
+ .../csse_covid_19_daily_reports_us/08-08-2020.csv  |   59 +
+ .../time_series_covid19_confirmed_US.csv           | 6682 ++++++++++----------
+ .../time_series_covid19_confirmed_global.csv       |  534 +-
+ .../time_series_covid19_deaths_US.csv              | 6682 ++++++++++----------
+ .../time_series_covid19_deaths_global.csv          |  534 +-
+ .../time_series_covid19_recovered_global.csv       |  508 +-
+ 8 files changed, 11471 insertions(+), 7470 deletions(-)
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-08-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-08-2020.csv
+Sat Aug 15 12:00:00 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+From https://github.com/CSSEGISandData/COVID-19
+ * branch              master     -> FETCH_HEAD
+   824ea3ba..4a4b2d9c  master     -> origin/master
+Updating 824ea3ba..4a4b2d9c
+Fast-forward
+ csse_covid_19_data/README.md                       |    7 +-
+ csse_covid_19_data/UID_ISO_FIPS_LookUp_Table.csv   |    8 +-
+ .../csse_covid_19_daily_reports/08-09-2020.csv     | 3941 ++++++++++++
+ .../csse_covid_19_daily_reports/08-10-2020.csv     | 3941 ++++++++++++
+ .../csse_covid_19_daily_reports/08-11-2020.csv     | 3944 ++++++++++++
+ .../csse_covid_19_daily_reports/08-12-2020.csv     | 3944 ++++++++++++
+ .../csse_covid_19_daily_reports/08-13-2020.csv     | 3946 ++++++++++++
+ .../csse_covid_19_daily_reports/08-14-2020.csv     | 3946 ++++++++++++
+ .../csse_covid_19_daily_reports_us/08-09-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/08-10-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/08-11-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/08-12-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/08-13-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/08-14-2020.csv  |   59 +
+ .../csse_covid_19_time_series/Errata.csv           |   21 +
+ .../time_series_covid19_confirmed_US.csv           | 6682 ++++++++++----------
+ .../time_series_covid19_confirmed_global.csv       |  534 +-
+ .../time_series_covid19_deaths_US.csv              | 6682 ++++++++++----------
+ .../time_series_covid19_deaths_global.csv          |  534 +-
+ .../time_series_covid19_recovered_global.csv       |  508 +-
+ 20 files changed, 31517 insertions(+), 7475 deletions(-)
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-09-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-10-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-11-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-12-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-13-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-14-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-09-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-10-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-11-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-12-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-13-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-14-2020.csv
+Sat Aug 22 12:00:00 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+From https://github.com/CSSEGISandData/COVID-19
+ * branch              master     -> FETCH_HEAD
+   4a4b2d9c..e634d627  master     -> origin/master
+Updating 4a4b2d9c..e634d627
+Fast-forward
+ README.md                                          |    1 +
+ csse_covid_19_data/README.md                       |    6 +
+ .../csse_covid_19_daily_reports/08-13-2020.csv     |    2 +-
+ .../csse_covid_19_daily_reports/08-14-2020.csv     |   56 +-
+ .../csse_covid_19_daily_reports/08-15-2020.csv     | 3946 ++++++++++++
+ .../csse_covid_19_daily_reports/08-16-2020.csv     | 3946 ++++++++++++
+ .../csse_covid_19_daily_reports/08-17-2020.csv     | 3948 ++++++++++++
+ .../csse_covid_19_daily_reports/08-18-2020.csv     | 3948 ++++++++++++
+ .../csse_covid_19_daily_reports/08-19-2020.csv     | 3950 ++++++++++++
+ .../csse_covid_19_daily_reports/08-20-2020.csv     | 3950 ++++++++++++
+ .../csse_covid_19_daily_reports/08-21-2020.csv     | 3950 ++++++++++++
+ .../csse_covid_19_daily_reports_us/08-13-2020.csv  |    2 +-
+ .../csse_covid_19_daily_reports_us/08-14-2020.csv  |    2 +-
+ .../csse_covid_19_daily_reports_us/08-15-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/08-16-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/08-17-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/08-18-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/08-19-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/08-20-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/08-21-2020.csv  |   59 +
+ .../csse_covid_19_time_series/Errata.csv           |   10 +-
+ .../time_series_covid19_confirmed_US.csv           | 6682 ++++++++++----------
+ .../time_series_covid19_confirmed_global.csv       |  534 +-
+ .../time_series_covid19_deaths_US.csv              | 6682 ++++++++++----------
+ .../time_series_covid19_deaths_global.csv          |  534 +-
+ .../time_series_covid19_recovered_global.csv       |  508 +-
+ who_covid_19_situation_reports/README.md           |    7 +
+ .../who_covid_19_sit_rep_time_series.csv           |  539 +-
+ 28 files changed, 35844 insertions(+), 7772 deletions(-)
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-15-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-16-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-17-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-18-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-19-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-20-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-21-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-15-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-16-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-17-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-18-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-19-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-20-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-21-2020.csv
+Sun Aug 23 12:00:00 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+From https://github.com/CSSEGISandData/COVID-19
+ * branch              master     -> FETCH_HEAD
+   e634d627..4eb0bbe2  master     -> origin/master
+Updating e634d627..4eb0bbe2
+Fast-forward
+ README.md                                          |   33 +-
+ csse_covid_19_data/README.md                       |    1 +
+ .../csse_covid_19_daily_reports/08-21-2020.csv     |   10 +-
+ .../csse_covid_19_daily_reports/08-22-2020.csv     | 3951 ++++++++++++
+ .../csse_covid_19_daily_reports_us/08-21-2020.csv  |    4 +-
+ .../csse_covid_19_daily_reports_us/08-22-2020.csv  |   59 +
+ .../csse_covid_19_time_series/Errata.csv           |    2 +
+ .../time_series_covid19_confirmed_US.csv           | 6682 ++++++++++----------
+ .../time_series_covid19_confirmed_global.csv       |  534 +-
+ .../time_series_covid19_deaths_US.csv              | 6682 ++++++++++----------
+ .../time_series_covid19_deaths_global.csv          |  534 +-
+ .../time_series_covid19_recovered_global.csv       |  508 +-
+ 12 files changed, 11522 insertions(+), 7478 deletions(-)
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-22-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-22-2020.csv
+Sat Aug 29 12:00:00 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+From https://github.com/CSSEGISandData/COVID-19
+ * branch              master     -> FETCH_HEAD
+   4eb0bbe2..37b2fa02  master     -> origin/master
+Updating 4eb0bbe2..37b2fa02
+Fast-forward
+ csse_covid_19_data/README.md                       |   14 +-
+ .../csse_covid_19_daily_reports/08-18-2020.csv     | 7896 ++++++++++----------
+ .../csse_covid_19_daily_reports/08-23-2020.csv     | 3951 ++++++++++
+ .../csse_covid_19_daily_reports/08-24-2020.csv     | 3951 ++++++++++
+ .../csse_covid_19_daily_reports/08-25-2020.csv     | 3951 ++++++++++
+ .../csse_covid_19_daily_reports/08-26-2020.csv     | 3951 ++++++++++
+ .../csse_covid_19_daily_reports/08-27-2020.csv     | 3951 ++++++++++
+ .../csse_covid_19_daily_reports/08-28-2020.csv     | 3951 ++++++++++
+ .../csse_covid_19_daily_reports_us/08-18-2020.csv  |  118 +-
+ .../csse_covid_19_daily_reports_us/08-23-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/08-24-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/08-25-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/08-26-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/08-27-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/08-28-2020.csv  |   59 +
+ .../time_series_covid19_confirmed_US.csv           | 6682 ++++++++---------
+ .../time_series_covid19_confirmed_global.csv       |  534 +-
+ .../time_series_covid19_deaths_US.csv              | 6682 ++++++++---------
+ .../time_series_covid19_deaths_global.csv          |  534 +-
+ .../time_series_covid19_recovered_global.csv       |  508 +-
+ 20 files changed, 35546 insertions(+), 11482 deletions(-)
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-23-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-24-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-25-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-26-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-27-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-28-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-23-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-24-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-25-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-26-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-27-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-28-2020.csv
+Sun Aug 30 12:00:00 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+From https://github.com/CSSEGISandData/COVID-19
+ * branch              master     -> FETCH_HEAD
+   37b2fa02..56f5b3ce  master     -> origin/master
+Updating 37b2fa02..56f5b3ce
+Fast-forward
+ csse_covid_19_data/README.md                       |    1 +
+ .../csse_covid_19_daily_reports/08-29-2020.csv     | 3951 ++++++++++++
+ .../csse_covid_19_daily_reports_us/08-29-2020.csv  |   59 +
+ .../time_series_covid19_confirmed_US.csv           | 6682 ++++++++++----------
+ .../time_series_covid19_confirmed_global.csv       |  534 +-
+ .../time_series_covid19_deaths_US.csv              | 6682 ++++++++++----------
+ .../time_series_covid19_deaths_global.csv          |  534 +-
+ .../time_series_covid19_recovered_global.csv       |  508 +-
+ 8 files changed, 11481 insertions(+), 7470 deletions(-)
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-29-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-29-2020.csv
+Sat Sep  5 12:00:00 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+From https://github.com/CSSEGISandData/COVID-19
+ * branch              master     -> FETCH_HEAD
+   56f5b3ce..a5b03688  master     -> origin/master
+Updating 56f5b3ce..a5b03688
+Fast-forward
+ README.md                                          |    7 +
+ csse_covid_19_data/README.md                       |    9 +-
+ csse_covid_19_data/UID_ISO_FIPS_LookUp_Table.csv   |    2 +-
+ .../csse_covid_19_daily_reports/08-30-2020.csv     | 3951 ++++++++++++
+ .../csse_covid_19_daily_reports/08-31-2020.csv     | 3955 ++++++++++++
+ .../csse_covid_19_daily_reports/09-01-2020.csv     | 3955 ++++++++++++
+ .../csse_covid_19_daily_reports/09-02-2020.csv     | 3955 ++++++++++++
+ .../csse_covid_19_daily_reports/09-03-2020.csv     | 3955 ++++++++++++
+ .../csse_covid_19_daily_reports/09-04-2020.csv     | 3955 ++++++++++++
+ .../csse_covid_19_daily_reports_us/08-30-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/08-31-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/09-01-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/09-02-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/09-03-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/09-04-2020.csv  |   59 +
+ .../time_series_covid19_confirmed_US.csv           | 6682 ++++++++++----------
+ .../time_series_covid19_confirmed_global.csv       |  534 +-
+ .../time_series_covid19_deaths_US.csv              | 6682 ++++++++++----------
+ .../time_series_covid19_deaths_global.csv          |  534 +-
+ .../time_series_covid19_recovered_global.csv       |  508 +-
+ 20 files changed, 31564 insertions(+), 7474 deletions(-)
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-30-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/08-31-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/09-01-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/09-02-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/09-03-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/09-04-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-30-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/08-31-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-01-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-02-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-03-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-04-2020.csv
+Wed Sep  9 12:00:01 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+From https://github.com/CSSEGISandData/COVID-19
+ * branch              master     -> FETCH_HEAD
+   a5b03688..968f9e62  master     -> origin/master
+Updating a5b03688..968f9e62
+Fast-forward
+ csse_covid_19_data/README.md                       |    4 +-
+ .../csse_covid_19_daily_reports/09-05-2020.csv     | 3955 ++++++++++++
+ .../csse_covid_19_daily_reports/09-06-2020.csv     | 3955 ++++++++++++
+ .../csse_covid_19_daily_reports/09-07-2020.csv     | 3955 ++++++++++++
+ .../csse_covid_19_daily_reports/09-08-2020.csv     | 3955 ++++++++++++
+ .../csse_covid_19_daily_reports_us/09-05-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/09-06-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/09-07-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/09-08-2020.csv  |   59 +
+ .../csse_covid_19_time_series/Errata.csv           |   28 +
+ .../time_series_covid19_confirmed_US.csv           | 6682 ++++++++++----------
+ .../time_series_covid19_confirmed_global.csv       |  534 +-
+ .../time_series_covid19_deaths_US.csv              | 6682 ++++++++++----------
+ .../time_series_covid19_deaths_global.csv          |  534 +-
+ .../time_series_covid19_recovered_global.csv       |  508 +-
+ 15 files changed, 23557 insertions(+), 7471 deletions(-)
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/09-05-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/09-06-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/09-07-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/09-08-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-05-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-06-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-07-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-08-2020.csv
+Fri Sep 11 12:00:00 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+From https://github.com/CSSEGISandData/COVID-19
+ * branch              master     -> FETCH_HEAD
+   968f9e62..f4119c8c  master     -> origin/master
+Updating 968f9e62..f4119c8c
+Fast-forward
+ csse_covid_19_data/README.md                       |    4 +-
+ .../csse_covid_19_daily_reports/09-09-2020.csv     | 3955 ++++++++++++
+ .../csse_covid_19_daily_reports/09-10-2020.csv     | 3955 ++++++++++++
+ .../csse_covid_19_daily_reports_us/09-09-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/09-10-2020.csv  |   59 +
+ .../time_series_covid19_confirmed_US.csv           | 6682 ++++++++++----------
+ .../time_series_covid19_confirmed_global.csv       |  534 +-
+ .../time_series_covid19_deaths_US.csv              | 6682 ++++++++++----------
+ .../time_series_covid19_deaths_global.csv          |  534 +-
+ .../time_series_covid19_recovered_global.csv       |  508 +-
+ 10 files changed, 15501 insertions(+), 7471 deletions(-)
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/09-09-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/09-10-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-09-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-10-2020.csv
+Sun Sep 13 12:00:01 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+From https://github.com/CSSEGISandData/COVID-19
+ * branch              master     -> FETCH_HEAD
+   f4119c8c..5e9200bd  master     -> origin/master
+Updating f4119c8c..5e9200bd
+Fast-forward
+ .../csse_covid_19_daily_reports/09-11-2020.csv     | 3955 ++++++++++++
+ .../csse_covid_19_daily_reports/09-12-2020.csv     | 3955 ++++++++++++
+ .../csse_covid_19_daily_reports_us/09-11-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/09-12-2020.csv  |   59 +
+ .../time_series_covid19_confirmed_US.csv           | 6682 ++++++++++----------
+ .../time_series_covid19_confirmed_global.csv       |  534 +-
+ .../time_series_covid19_deaths_US.csv              | 6682 ++++++++++----------
+ .../time_series_covid19_deaths_global.csv          |  534 +-
+ .../time_series_covid19_recovered_global.csv       |  508 +-
+ 9 files changed, 15498 insertions(+), 7470 deletions(-)
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/09-11-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/09-12-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-11-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-12-2020.csv
+Thu Sep 17 12:00:01 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+From https://github.com/CSSEGISandData/COVID-19
+ * branch              master     -> FETCH_HEAD
+   5e9200bd..b5360e17  master     -> origin/master
+Updating 5e9200bd..b5360e17
+Fast-forward
+ README.md                                          |    3 +-
+ csse_covid_19_data/README.md                       |    7 +-
+ .../csse_covid_19_daily_reports/09-13-2020.csv     | 3955 ++++++++++++
+ .../csse_covid_19_daily_reports/09-14-2020.csv     | 3955 ++++++++++++
+ .../csse_covid_19_daily_reports/09-15-2020.csv     | 3955 ++++++++++++
+ .../csse_covid_19_daily_reports/09-16-2020.csv     | 3955 ++++++++++++
+ .../csse_covid_19_daily_reports_us/09-13-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/09-14-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/09-15-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/09-16-2020.csv  |   59 +
+ .../time_series_covid19_confirmed_US.csv           | 6682 ++++++++++----------
+ .../time_series_covid19_confirmed_global.csv       |  534 +-
+ .../time_series_covid19_deaths_US.csv              | 6682 ++++++++++----------
+ .../time_series_covid19_deaths_global.csv          |  534 +-
+ .../time_series_covid19_recovered_global.csv       |  508 +-
+ 15 files changed, 23534 insertions(+), 7472 deletions(-)
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/09-13-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/09-14-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/09-15-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/09-16-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-13-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-14-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-15-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-16-2020.csv
+Sat Sep 19 12:00:00 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+From https://github.com/CSSEGISandData/COVID-19
+ * branch              master     -> FETCH_HEAD
+   b5360e17..e639c6ac  master     -> origin/master
+Updating b5360e17..e639c6ac
+Fast-forward
+ README.md                                          |    3 +-
+ .../csse_covid_19_daily_reports/09-15-2020.csv     |  136 +-
+ .../csse_covid_19_daily_reports/09-17-2020.csv     | 3955 ++++++++++++
+ .../csse_covid_19_daily_reports/09-18-2020.csv     | 3955 ++++++++++++
+ .../csse_covid_19_daily_reports_us/09-15-2020.csv  |    2 +-
+ .../csse_covid_19_daily_reports_us/09-17-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/09-18-2020.csv  |   59 +
+ .../time_series_covid19_confirmed_US.csv           | 6682 ++++++++++----------
+ .../time_series_covid19_confirmed_global.csv       |  534 +-
+ .../time_series_covid19_deaths_US.csv              | 6682 ++++++++++----------
+ .../time_series_covid19_deaths_global.csv          |  534 +-
+ .../time_series_covid19_recovered_global.csv       |  508 +-
+ 12 files changed, 15569 insertions(+), 7540 deletions(-)
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/09-17-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/09-18-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-17-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-18-2020.csv
+Tue Sep 22 12:00:00 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+From https://github.com/CSSEGISandData/COVID-19
+ * branch              master     -> FETCH_HEAD
+   e639c6ac..4b2d109a  master     -> origin/master
+Updating e639c6ac..4b2d109a
+Fast-forward
+ .../csse_covid_19_daily_reports/09-19-2020.csv     | 3955 ++++++++++++
+ .../csse_covid_19_daily_reports/09-20-2020.csv     | 3955 ++++++++++++
+ .../csse_covid_19_daily_reports/09-21-2020.csv     | 3956 ++++++++++++
+ .../csse_covid_19_daily_reports_us/09-19-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/09-20-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/09-21-2020.csv  |   59 +
+ .../time_series_covid19_confirmed_US.csv           | 6682 ++++++++++----------
+ .../time_series_covid19_confirmed_global.csv       |  534 +-
+ .../time_series_covid19_deaths_US.csv              | 6682 ++++++++++----------
+ .../time_series_covid19_deaths_global.csv          |  534 +-
+ .../time_series_covid19_recovered_global.csv       |  508 +-
+ 11 files changed, 19513 insertions(+), 7470 deletions(-)
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/09-19-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/09-20-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/09-21-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-19-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-20-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-21-2020.csv

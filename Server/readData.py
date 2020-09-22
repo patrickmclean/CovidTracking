@@ -43,15 +43,27 @@ class DataReader:
         self.worldPopulations = pd.read_csv(csv_file)
         csv_file = cwd + '/'+config["populationspath"] + config["us state populations"]
         self.usStatePopulations = pd.read_csv(csv_file)
+
+        # Read country and state favorites
+        self.countryfavorites = config["favorite countries"]
+        self.statefavorites = config["favorite states"]
         
 
     def getCountryList(self):
         df = self.globalDeaths
-        return pd.Series(df['Country/Region'].unique()).to_json()
+        countries = pd.Series(df['Country/Region'].unique())
+        favorites = pd.Series(self.countryfavorites.split(','))
+        new_list = pd.concat([favorites,countries],ignore_index=True)
+        return new_list.to_json()
 
     def getStateList(self):
         df = self.usDeaths
-        return pd.Series(df['Province_State'].unique()).to_json()
+        states = pd.Series(df['Province_State'].unique())
+        favorites = pd.Series(self.statefavorites.split(','))
+        new_list = pd.concat([favorites,states],ignore_index=True)
+        return new_list.to_json()
+
+        #return pd.Series(df['Province_State'].unique()).to_json()
         
     def getData(self,country,state,datatype):
         
