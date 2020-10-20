@@ -72,6 +72,10 @@ class DataReader:
             data = self.getDeathsUS(state)
         if(('US' in country) & (datatype in ("cases-abs","cases-1m"))):
             data = self.getCasesUS(state)
+        if(('US' in country) & ('All' in state) & (datatype in ("deaths-abs","deaths-1m" ))):
+            data = self.getDeathsGlobal(country)
+        if(('US' in country) & ('All' in state) & (datatype in ("cases-abs","cases-1m"))):
+            data = self.getCasesGlobal(country)
         if(('US' not in country) & (datatype in ("deaths-abs","deaths-1m"))):
             data = self.getDeathsGlobal(country)
         if(('US' not in country) & (datatype in ("cases-abs","cases-1m"))):
@@ -86,10 +90,14 @@ class DataReader:
         else: statePopulation = 1
         
         # Divide if 1m
-        if(('US' in country) & (datatype == "deaths-1m")):
+        if(('US' in country) & ('All' not in state) & (datatype == "deaths-1m")):
             data = data / statePopulation.values
-        if(('US' in country) & (datatype == "cases-1m")):
+        if(('US' in country) & ('All' not in state) & (datatype == "cases-1m")):
             data = data / statePopulation.values
+        if(('US' in country) & ('All' in state) & (datatype == "deaths-1m")):
+            data = data / countryPopulation.values
+        if(('US' in country) & ('All' in state) & (datatype == "cases-1m")):
+            data = data / countryPopulation.values
         if(('US' not in country) & (datatype == "deaths-1m")):
             data = data / countryPopulation.values
         if(('US' not in country) & (datatype == "cases-1m")):

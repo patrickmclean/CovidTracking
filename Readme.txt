@@ -25,6 +25,13 @@ git pull
 If it complains, delete the offending directories
 Then move scripts back
 
+restart the app:
+ps -aux to get the process number
+kill -9 PID
+python3 Server/webserver2.py &
+
+
+
 # Running the webserver
 Login via SSH above
 cd CovidTracking

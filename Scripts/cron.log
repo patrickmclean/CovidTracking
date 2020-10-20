@@ -1261,3 +1261,104 @@ Fast-forward
  create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-19-2020.csv
  create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-20-2020.csv
  create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-21-2020.csv
+Fri Sep 25 12:00:00 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+From https://github.com/CSSEGISandData/COVID-19
+ * branch              master     -> FETCH_HEAD
+   4b2d109a..f806ce92  master     -> origin/master
+Updating 4b2d109a..f806ce92
+Fast-forward
+ README.md                                          |    2 +-
+ csse_covid_19_data/README.md                       |    3 +-
+ .../csse_covid_19_daily_reports/09-22-2020.csv     | 3956 ++++++++++++
+ .../csse_covid_19_daily_reports/09-23-2020.csv     | 3956 ++++++++++++
+ .../csse_covid_19_daily_reports/09-24-2020.csv     | 3956 ++++++++++++
+ .../csse_covid_19_daily_reports_us/09-22-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/09-23-2020.csv  |   59 +
+ .../csse_covid_19_daily_reports_us/09-24-2020.csv  |   59 +
+ .../time_series_covid19_confirmed_US.csv           | 6682 ++++++++++----------
+ .../time_series_covid19_confirmed_global.csv       |  534 +-
+ .../time_series_covid19_deaths_US.csv              | 6682 ++++++++++----------
+ .../time_series_covid19_deaths_global.csv          |  534 +-
+ .../time_series_covid19_recovered_global.csv       |  508 +-
+ 13 files changed, 19518 insertions(+), 7472 deletions(-)
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/09-22-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/09-23-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/09-24-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-22-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-23-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-24-2020.csv
+Sat Sep 26 12:00:00 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+From https://github.com/CSSEGISandData/COVID-19
+ * branch              master     -> FETCH_HEAD
+   f806ce92..36a033cf  master     -> origin/master
+Updating f806ce92..36a033cf
+Fast-forward
+ .../csse_covid_19_daily_reports/09-15-2020.csv     |   60 +-
+ .../csse_covid_19_daily_reports/09-16-2020.csv     | 7910 ++++++++++----------
+ .../csse_covid_19_daily_reports/09-17-2020.csv     | 7910 ++++++++++----------
+ .../csse_covid_19_daily_reports/09-25-2020.csv     | 3956 ++++++++++
+ .../csse_covid_19_daily_reports_us/09-15-2020.csv  |    2 +-
+ .../csse_covid_19_daily_reports_us/09-16-2020.csv  |  118 +-
+ .../csse_covid_19_daily_reports_us/09-17-2020.csv  |  118 +-
+ .../csse_covid_19_daily_reports_us/09-25-2020.csv  |   59 +
+ .../csse_covid_19_time_series/Errata.csv           |   22 +-
+ .../time_series_covid19_confirmed_US.csv           | 6682 ++++++++---------
+ .../time_series_covid19_confirmed_global.csv       |  534 +-
+ .../time_series_covid19_deaths_US.csv              | 6682 ++++++++---------
+ .../time_series_covid19_deaths_global.csv          |  534 +-
+ .../time_series_covid19_recovered_global.csv       |  508 +-
+ 14 files changed, 19557 insertions(+), 15538 deletions(-)
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/09-25-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-25-2020.csv
+Sun Sep 27 12:00:00 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+From https://github.com/CSSEGISandData/COVID-19
+ * branch              master     -> FETCH_HEAD
+   36a033cf..22b4b512  master     -> origin/master
+Updating 36a033cf..22b4b512
+Fast-forward
+ .../csse_covid_19_daily_reports/09-26-2020.csv     | 3956 ++++++++++++
+ .../csse_covid_19_daily_reports_us/09-26-2020.csv  |   59 +
+ .../time_series_covid19_confirmed_US.csv           | 6682 ++++++++++----------
+ .../time_series_covid19_confirmed_global.csv       |  534 +-
+ .../time_series_covid19_deaths_US.csv              | 6682 ++++++++++----------
+ .../time_series_covid19_deaths_global.csv          |  534 +-
+ .../time_series_covid19_recovered_global.csv       |  508 +-
+ 7 files changed, 11485 insertions(+), 7470 deletions(-)
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports/09-26-2020.csv
+ create mode 100644 csse_covid_19_data/csse_covid_19_daily_reports_us/09-26-2020.csv
+Tue Sep 29 12:00:00 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+Fri Oct  2 12:00:00 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+Sat Oct  3 12:00:01 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+Sun Oct  4 12:00:00 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+Thu Oct  8 12:00:01 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+Sat Oct 10 12:00:01 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+Sun Oct 11 12:00:01 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+Mon Oct 12 12:00:00 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+Thu Oct 15 12:00:00 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+Fri Oct 16 12:00:00 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+Tue Oct 20 12:00:00 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
