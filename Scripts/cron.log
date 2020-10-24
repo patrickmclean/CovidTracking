@@ -1362,3 +1362,9 @@ xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools
 Tue Oct 20 12:00:00 CEST 2020
 /Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
 xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+Wed Oct 21 12:00:00 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+Sat Oct 24 12:00:00 CEST 2020
+/Users/patrickmclean/odrive/Google Drive - Main/Development/CovidTracking/CovidData/COVID-19
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun

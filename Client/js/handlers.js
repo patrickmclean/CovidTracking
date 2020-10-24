@@ -90,19 +90,34 @@ $(document).ready(function() {
             "datatype": $("#select-metric").val()})
          .done(function(string) {
             let input = Array(JSON.parse(string))[0]; 
-            document.getElementById('y-scale-values').value=100 ;
-            myChart.options.scales.yAxes[0].ticks.max = 10;
             myChart.data.labels = input.index; //dates
             myChart.data.datasets[0].data = input.data;
             myChart.update();
             });
     e.preventDefault();
     }),
- 
 
-
-    $("#y-scale-values").change(function(e) {
-        myChart.options.scales.yAxes[0].ticks.max = parseInt(e.currentTarget.value);
+    $("#inc-y-scale").click(function(){
+        mySession.yScale = mySession.yScale*2;
+        myChart.options.scales.yAxes[0].ticks.max = parseInt(mySession.yScale);
         myChart.update();
-    })
+    });
+
+    $("#dec-y-scale").click(function(){
+        mySession.yScale = mySession.yScale/2;
+        myChart.options.scales.yAxes[0].ticks.max = parseInt(mySession.yScale);
+        myChart.update();
+    });
+
+
 });
+
+class sessionClass {
+    constructor(){
+        this.resetData();
+    }
+
+    resetData(){
+        this.yScale = 100; // y axis scale default
+    }
+}
