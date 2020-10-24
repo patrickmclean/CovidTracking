@@ -89,6 +89,13 @@ $(document).ready(function() {
             "state": $("#select-states").val(),
             "datatype": $("#select-metric").val()})
          .done(function(string) {
+             switch(e.target.value) {
+                 case "deaths-abs": mySession.yScale = 100; break;
+                 case "cases-abs": mySession.yScale = 1000; break;
+                 case "deaths-1m": mySession.yScale = 4; break;
+                 case "cases-1m": mySession.yScale = 400; break;
+             } 
+             myChart.options.scales.yAxes[0].ticks.max = parseInt(mySession.yScale);
             let input = Array(JSON.parse(string))[0]; 
             myChart.data.labels = input.index; //dates
             myChart.data.datasets[0].data = input.data;

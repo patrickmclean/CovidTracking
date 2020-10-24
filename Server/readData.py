@@ -105,9 +105,11 @@ class DataReader:
         
         # 7 day delta average (should add this to the class)
         deltaData = data.copy()
+        
         deltaData[0] = 0
         for i in range(1,data.size):
             deltaData[i] = data[i] - data[i-1]
+        deltaData = deltaData.clip(0) # Remove negative values
         delta7d = deltaData.copy().astype(float)
         for i in range(7,data.size):
             total = 0
